@@ -1,44 +1,49 @@
 * {
-    margin: 0;
-    padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
 }
 body {
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Segoe UI","Segoe","Raleway",Tahoma, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: black;
-  background-color: #fcfcfc;
-  background-repeat: repeat-y;
-  background-size: cover;
-  background-image: url("../img/background.jpg");
   margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #333;
+  background-color: white;
   overflow: auto; /* IMPORTANT - fixes inability to scroll in MS Office embedded web browser */
 }
-
-/* topbar 1 and 2 when visible and set to height 30 and 35 will mimic the two top gray bars in
-   sharepoint.  In  practice, they seem a bit much for the DS because they hold no content and
-   simply take up space. We will leave them available but reveal only topbar 1 with a much
-   smaller height. */
-#topbar1 {
-  background-color: #444;
-  color: white;
-  /* height: 30px; */
-  height: 5px;
+#ds-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: white url("../img/background.jpg") no-repeat center;
+  background-size: cover;
 }
-#topbar2 {
-  background-color: rgba(6, 6, 6, 0.8);
-  height: 35px;
-  display: none;
+#topbars {
+  text-align: center;
+  color: white;
+  background-color: #20558a;
+  padding: 0.5em;
+  font-size: 1.2em;
 }
 /* MAIN CONTENT */
 main {
-  display: block;
+  flex: 1;
   padding: 1.5em 2em 4em 2em;
-  margin: 0;
-  height: 80vh;
+  margin: 0 auto;
+  max-width: 740px;
+}
+h1 {
+  line-height: 1.2em;
 }
 h2 {
-  font-size: 16px;
+  font-size: 1.2em;
+  font-weight: 400;
   margin-bottom: 1em;
 }
 a {
@@ -50,13 +55,10 @@ a:hover {
 #header {
   margin: 0 0 10px;
 }
-#intro {
-  margin: 0 0 10px;
-}
+/* Accordions */
 .accordion {
   margin: 0 0 10px;
   padding: 0;
-  max-width: 740px;
   background-color: white;
 }
 .accordion.closed .accordion-content {
@@ -77,8 +79,8 @@ a:hover {
   display: block;
   position: absolute;
   right: 1em;
-  top: 0.5em;
-  font-size: 1.5em;
+  top: 18px;
+  font-size: 1.4em;
   transition: all 0.35s ease 0s;
 }
 .accordion.closed .accordion-title::after {
@@ -88,8 +90,9 @@ a:hover {
   border: 2px solid #bbb;
   border-top: none;
   margin: 0;
-  padding: 1em 0;
+  padding: 0;
 }
+/* Choices */
 #find_choice {
   margin-bottom: 2em;
 }
@@ -104,47 +107,63 @@ a:hover {
 #idpSelect {
   margin-left: 1em;
 }
-
 .choice_row {
-    display: block;
+  display: block;
 }
-
 .choice_row ul {
-    display: inline-block;
-    text-align: center;
-    list-style: none;
-    margin: 6px;
+  display: grid;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
-
+@media only screen and (min-width: 768px) {
+  /* Three columns on desktop: */
+  .choice_row ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}  
 .choice_row li {
-    display: inline-block;
-    text-align: center;
-    width: 100px;
-    vertical-align: top;
-    margin: 0.5em 0.5em 1em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-
+.choice_row li a {
+  flex: 1;
+  display: block;
+  padding: 2em;
+}
+#common_choices_box .choice_row li:nth-child(odd) {
+  background-color: #f2f2f2;
+}
 div.idp_img {
-    height: 69px;
-    margin: 2px;
 }
-
 div.idp_text {
-    text-align: center;
-    font-size: 12px;
-    font-weight: normal;
-    max-width: 95%;
-    height: 42px;
-    clear: left;
 }
-
+.choice_row img {
+  width: auto;
+  max-height: 50px;
+}
 button.long-button {
-    background-color: #4CAF50;
-    border: 2px solid #4CAF50;
-    border-radius: 5px;
-    width: 260px;
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-    text-align: center;
+  background-color: #4CAF50;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  width: 260px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+#ds-footer {
+  padding: 2em 3em;
+  border-bottom: 1px solid #20558a;
+  background-color: #414141;
+  color: #ccc;
+  font-size: 0.9em;
+}
+#ds-footer p {
+  max-width: 584px;
+  margin: auto;
 }

@@ -1,167 +1,167 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-<title>NIAID Discovery and Collaboration Platform</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
-<link href="favicon.ico" type="image/x-icon" rel="shortcut icon"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-<link rel="stylesheet" type="text/css" href="css/main.css" />
-<link rel="stylesheet" type="text/css" href="css/idpselect.css" />
-<link rel="stylesheet" type="text/css" href="css/fonts.css" />
-<script src="js/jquery.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/spin.min.js"></script>
-</head>
-
-<body>
-<header id="topbars">
-<div id="topbar1"></div>
-<div id="topbar2"></div>
-</header>
-<main id="body-block">
-<div id="header">
-<h1>NIAID Discovery and Collaboration Platform Login</h1>
-</div>
-
-<div id="intro">
-<p>Please select your login server:</p>
-</div>
-
-<div id="previous_choice" class="accordion" style="display: none;">
-<h2 id="show_previous_choices" class="accordion-title">Select a previous choice</h2>
-<div id="previous_choices_box" class="accordion-content">
-<div class="choice_row">
-<ul></ul>
-</div>
-</div>
-</div>
-
-<div id="common_choice" class="accordion">
-<h2 id="show_common_choices" class="accordion-title">Select a common choice</h2>
-<div id="common_choices_box" class="accordion-content">
-<div class="choice_row">
-<ul class="choices">
-
-<!-- 1 -->
-<li>
-<a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=urn%3Amace%3Aincommon%3Anih.gov">
-<div class="idp_img"><img src="img/logo/nih_80_60.png" alt="National Institutes of Health" width="80" height="60"></div>
-<div class="idp_text">National Institutes of Health</div>
-</a>
-</li>
-
-<!-- 2 -->
-<li>
-<a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Fsecure.login.gov%2Fapi%2Fsaml">
-<div class="idp_img"><img src="img/logo/login-gov-favicon.png" alt="login.gov" width="80" height="60"></div>
-<div class="idp_text">login.gov</div>
-</a>
-</li>
-
-<!-- 3 -->
-<li>
-<a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Fidentityprovider.anl.gov%2Fidp%2Fshibboleth">
-<div class="idp_img"><img src="https://login.anl.gov/idp/images/argonne_header_logo_white.jpg" alt="Argonne National Laboratory" width="80" height="60"></div>
-<div class="idp_text">Argonne National Laboratory</div>
-</a>
-</li>
-
-<!-- 4 -->
-<li>
-<a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Fidp.bnl.gov%2Fidp%2Fshibboleth">
-<div class="idp_img"><img src="https://idp.bnl.gov/images/logo.jpg" alt="Brookhaven National Laboratory" width="80" height="60"></div>
-<div class="idp_text">Brookhaven National Laboratory</div>
-</a>
-</li>
-
-<!-- 5 -->
-<li>
-<a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Fidentity.research.gov%2Fsso">
-<div class="idp_img"><img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" alt="National Science Foundation" width="80" height="60"></div>
-<div class="idp_text">National Science Foundation</div>
-</a>
-</li>
-
-<!-- 6 -->
-<li>
-<a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=urn%3Amace%3Aincommon%3Albl.gov">
-<div class="idp_img"><img src="https://commons.lbl.gov/download/attachments/58393603/lbl-logo-scaled.png" alt="Lawrence Berkeley National Laboratory" width="80" height="60"></div>
-<div class="idp_text">Lawrence Berkeley National Laboratory</div>
-</a>
-</li>
-
-<!-- 7 -->
-<li>
-<a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Flogin.icermali.org%2Fidp%2Fshibboleth">
-<div class="idp_img"><img src="img/logo/icer_mali_80_60.png" alt="ICER - Mali" width="80" height="60"></div>
-<div class="idp_text">ICER - Mali</div>
-</a>
-</li>
-
-<!-- 8 -->
-<li>
-<a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Flogin.rhsp.org%2Fidp%2Fshibboleth">
-<div class="idp_img"><img src="img/logo/rhsp-logo.png" alt="ICER - Uganda" width="80" height="60"></div>
-<div class="idp_text">Rakai Health Sciences Program</div>
-</a>
-</li>
-
-
-<!-- 9 -->
-<li>
-<a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Fgoogle.cirrusidentity.com%2Fgateway">
-<div class="idp_img"><img src="img/logo/google_80_60.png" alt="Google" width="80" height="60"></div>
-<div class="idp_text">Google</div>
-</a>
-</li>
-
-<!-- A -->
-<li>
-<a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Fwin-live.cirrusidentity.com%2Fgateway">
-<div class="idp_img"><img src="img/logo/win_live_80_60.png" alt="Microsoft Account (Office 365, Windows Live, Hotmail)" width="80" height="60"></div>
-<div class="idp_text">Microsoft Account (Office 365, Windows Live, Hotmail)</div>
-</a>
-</li>
-
-<!-- B -->
-<li>
-<a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Flinkedin.cirrusidentity.com%2Fgateway">
-<div class="idp_img"><img src="https://discovery.scienceforum.sc/img/logo/linkedin.png" alt="LinkedIn" width="80" height="60"></div>
-<div class="idp_text">LinkedIn</div>
-</a>
-</li>
-
-<!-- C -->
-<li>
-<a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Fidp.es.net%2Fidp%2Fshibboleth">
-<div class="idp_img"><img src="https://www.es.net/assets/Logos/ESnetFinalRGB.jpg" alt="ESnet" width="80" height="60"></div>
-<div class="idp_text">ESnet</div>
-</a>
-</li>
-
-</ul>
-</div>
-</div>
-</div>
-
-<div id="find_choice" class="accordion closed">
-<h2 id="find_login_server" class="accordion-title">Find my login server</h2>
-<div id="idpSelect-container" class="accordion-content">
-<div id="idpSelect">
-</div>
-</div>
-</div>
-
-<div id="intro">
-<p>You are accessing a U.S. Government web site which may contain information that must be protected under the U.S. Privacy Act or other sensitive information and is intended for Government authorized use only.
-  Unauthorized attempts to upload information, change information, or use of this web site may result in disciplinary action, civil, and/or criminal penalties.
-  Unauthorized users of this web site should have no expectation of privacy regarding any communications or data processed by this web site.
-  Anyone accessing this web site expressly consents to monitoring of their actions and all communication or data transitioning or stored on or related to this web site and is advised that if such monitoring reveals possible evidence of criminal activity, NIH may provide that evidence to law enforcement officials.
-</p>
-</div>
-
-</main>
-</body>
-
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>NIAID Discovery and Collaboration Platform</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
+    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/idpselect.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/spin.min.js"></script>
+  </head>
+  <body>
+    <div id="ds-wrapper">
+      <header id="topbars">
+        <div id="topbar1">NIAID Discovery and Collaboration Platform</div>
+      </header>
+      <main id="body-block">
+        <div id="header">
+          <h1>NIAID Discovery and Collaboration Platform Login</h1>
+        </div>
+        
+        <div id="intro">
+          <p>Please select your login server:</p>
+        </div>
+        
+        <div id="previous_choice" class="accordion" style="display: none;">
+          <h2 id="show_previous_choices" class="accordion-title">Select a previous choice</h2>
+          <div id="previous_choices_box" class="accordion-content">
+            <div class="choice_row">
+              <ul></ul>
+            </div>
+          </div>
+        </div>
+        
+        <div id="common_choice" class="accordion">
+          <h2 id="show_common_choices" class="accordion-title">Select a common choice</h2>
+          <div id="common_choices_box" class="accordion-content">
+            <div class="choice_row">
+              <ul class="choices">
+  
+                <!-- 1 -->
+                <li>
+                  <a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=urn%3Amace%3Aincommon%3Anih.gov">
+                    <div class="idp_img"><img src="img/logo/nih_80_60.png" alt="National Institutes of Health" width="80" height="60"></div>
+                    <div class="idp_text">National Institutes of Health</div>
+                  </a>
+                </li>
+  
+                <!-- 2 -->
+                <li>
+                  <a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Fsecure.login.gov%2Fapi%2Fsaml">
+                    <div class="idp_img"><img src="img/logo/login-gov-favicon.png" alt="login.gov" width="80" height="60"></div>
+                    <div class="idp_text">login.gov</div>
+                  </a>
+                </li>
+  
+                <!-- 3 -->
+                <li>
+                  <a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Fidentityprovider.anl.gov%2Fidp%2Fshibboleth">
+                    <div class="idp_img"><img src="https://login.anl.gov/idp/images/argonne_header_logo_white.jpg" alt="Argonne National Laboratory" width="80" height="60"></div>
+                    <div class="idp_text">Argonne National Laboratory</div>
+                  </a>
+                </li>
+  
+                <!-- 4 -->
+                <li>
+                  <a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Fidp.bnl.gov%2Fidp%2Fshibboleth">
+                    <div class="idp_img"><img src="https://idp.bnl.gov/images/logo.jpg" alt="Brookhaven National Laboratory" width="80" height="60"></div>
+                    <div class="idp_text">Brookhaven National Laboratory</div>
+                  </a>
+                </li>
+  
+                <!-- 5 -->
+                <li>
+                  <a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Fidentity.research.gov%2Fsso">
+                    <div class="idp_img"><img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" alt="National Science Foundation" width="80" height="60"></div>
+                    <div class="idp_text">National Science Foundation</div>
+                  </a>
+                </li>
+  
+                <!-- 6 -->
+                <li>
+                  <a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=urn%3Amace%3Aincommon%3Albl.gov">
+                    <div class="idp_img"><img src="https://commons.lbl.gov/download/attachments/58393603/lbl-logo-scaled.png" alt="Lawrence Berkeley National Laboratory" width="80" height="60"></div>
+                    <div class="idp_text">Lawrence Berkeley National Laboratory</div>
+                  </a>
+                </li>
+  
+                <!-- 7 -->
+                <li>
+                  <a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Flogin.icermali.org%2Fidp%2Fshibboleth">
+                    <div class="idp_img"><img src="img/logo/icer_mali_80_60.png" alt="ICER - Mali" width="80" height="60"></div>
+                    <div class="idp_text">ICER - Mali</div>
+                  </a>
+                </li>
+  
+                <!-- 8 -->
+                <li>
+                  <a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Flogin.rhsp.org%2Fidp%2Fshibboleth">
+                    <div class="idp_img"><img src="img/logo/rhsp-logo.png" alt="ICER - Uganda" width="80" height="60"></div>
+                    <div class="idp_text">Rakai Health Sciences Program</div>
+                  </a>
+                </li>
+  
+  
+                <!-- 9 -->
+                <li>
+                  <a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Fgoogle.cirrusidentity.com%2Fgateway">
+                    <div class="idp_img"><img src="img/logo/google_80_60.png" alt="Google" width="80" height="60"></div>
+                    <div class="idp_text">Google</div>
+                  </a>
+                </li>
+  
+                <!-- A -->
+                <li>
+                  <a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Fwin-live.cirrusidentity.com%2Fgateway">
+                    <div class="idp_img"><img src="img/logo/win_live_80_60.png" alt="Microsoft Account (Office 365, Windows Live, Hotmail)" width="80" height="60"></div>
+                    <div class="idp_text">Microsoft Account (Office 365, Windows Live, Hotmail)</div>
+                  </a>
+                </li>
+              
+              <!-- B -->
+              <li>
+                <a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Flinkedin.cirrusidentity.com%2Fgateway">
+                  <div class="idp_img"><img src="https://discovery.scienceforum.sc/img/logo/linkedin.png" alt="LinkedIn" width="80" height="60"></div>
+                  <div class="idp_text">LinkedIn</div>
+                </a>
+              </li>
+              
+                <!-- C -->
+                <li>
+                  <a class="idp_choice_link" target="_top" href="https://federation.scienceforum.sc/Saml2/disco?entityID=https%3A%2F%2Fidp.es.net%2Fidp%2Fshibboleth">
+                    <div class="idp_img"><img src="https://www.es.net/assets/Logos/ESnetFinalRGB.jpg" alt="ESnet" width="80" height="60"></div>
+                    <div class="idp_text">ESnet</div>
+                  </a>
+                </li>
+              
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div id="find_choice" class="accordion closed">
+          <h2 id="find_login_server" class="accordion-title">Find my login server</h2>
+          <div id="idpSelect-container" class="accordion-content">
+            <div id="idpSelect">
+            </div>
+          </div>
+        </div>
+        
+      </main>
+      
+      <footer id="ds-footer">
+        <p>
+          You are accessing a U.S. Government web site which may contain information that must be protected under the U.S. Privacy Act or other sensitive information and is intended for Government authorized use only.
+          Unauthorized attempts to upload information, change information, or use of this web site may result in disciplinary action, civil, and/or criminal penalties.
+          Unauthorized users of this web site should have no expectation of privacy regarding any communications or data processed by this web site.
+          Anyone accessing this web site expressly consents to monitoring of their actions and all communication or data transitioning or stored on or related to this web site and is advised that if such monitoring reveals possible evidence of criminal activity, NIH may provide that evidence to law enforcement officials.
+        </p>
+      </footer>
+    </div>  
+  </body>
 </html>
