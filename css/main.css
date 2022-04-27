@@ -38,6 +38,9 @@ main {
   margin: 0 auto;
   max-width: 740px;
 }
+h1 {
+  line-height: 1.2em;
+}
 h2 {
   font-size: 1.2em;
   font-weight: 400;
@@ -109,11 +112,16 @@ a:hover {
 }
 .choice_row ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
   margin: 0;
   padding: 0;
 }
+@media only screen and (min-width: 768px) {
+  /* Three columns on desktop: */
+  .choice_row ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}  
 .choice_row li {
   display: flex;
   flex-direction: column;
